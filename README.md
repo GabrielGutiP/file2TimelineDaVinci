@@ -13,7 +13,10 @@ how the script manages the text inside it (the file.paragraphs and .text calls)*
 Simple, just make sure the Python that is being used by DaVinci has all requirements and drag "txt2video.py" to "C:\Users\Username\AppData\Roaming\Blackmagic Design\DaVinci Resolve\Support\Fusion\Scripts\Edit".
 Then go into DaVinci, enter in Edit panel, go to Workspace in the upper bar, then go to Scripts and there you'll just have to click it to use it.
 
-*Any problem with the script will be seeing in the Console, just follow the same path as before but click in Console instead of Scripts.*
+You can import in your Media Pool the bin (Bases.drb) or create your own bin to contain all the Text+ templates you are going to use. **Remember that if you make yor own, be careful with names and change them
+in the code so it finds them.**
+
+*Any problem with the script will be seen in the Console, just follow the same path as before but click in Console instead of Scripts.*
 
 ## Use:
 You will need to add marks to your timeline. Each mark signifies one paragraph. Blue ones are for lower screen text adn red ones for mid right text. Also for red marks, the script doesn't adjust everything,
@@ -24,6 +27,10 @@ you'll have to adjust manually the text and background.
 Example with Blue mark and Red mark with editing. Upper image is the Edit timeline and below the result.
 
 Another thing to note is that text is parsed by an internal function I created to make paragraphs to fit my design. Feel free to change those too, as my code isn't exactly perfect for this task.
+
+## Test it:
+Use the document "Prueba.docx" to test it if you want. You will have to add markers in this other to see its intended function: blue, red, blue, red, blue, blue.
+You will see that the last Text+ clip has the text formated in a strange way, for those cases either change the part of the code that deals with creating different lines or edit manually in DaVinci.
 
 ## Thanks to:
 Snap Captions from Orson Lord, their amazing Lua code let me understand the DaVinci Resolve API.
